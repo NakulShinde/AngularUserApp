@@ -3,13 +3,20 @@ import { NgModule } from '@angular/core';
 
 import { AlertModule } from 'ngx-bootstrap';
 
-import { AppComponent } from './app.component';
+//Routing data
 import { AppRoutingModule }     from './app-routing.module';
+
+//App Components
+import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { UserListComponent } from './user-list/user-list.component';
+
+//App Services
+import { UserService } from './services/user/user.service';
+
 
 @NgModule({
   declarations: [
@@ -25,7 +32,7 @@ import { UserListComponent } from './user-list/user-list.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
