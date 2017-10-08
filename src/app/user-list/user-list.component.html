@@ -12,6 +12,9 @@
       </tr>
     </thead>
     <tbody>
+      <tr *ngIf="!users">
+        <td align="center" colspan="5">Loading..</td>
+      </tr>
       <tr *ngFor="let user of users">
         <td>{{user.id}}</td>
         <td>{{user.firstName}}</td>

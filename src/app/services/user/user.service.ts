@@ -13,4 +13,11 @@ export class UserService {
 	getUsers(): Promise<User[]> {
 		return Promise.resolve(USERS);
 	}
+
+	getDelayedUsers(): Promise<User[]> {
+		return new Promise(resolve => {
+			// Simulate server latency with 2 second delay
+			setTimeout(() => resolve(this.getUsers()), 2000);
+		});
+	}
 }

@@ -19,6 +19,6 @@ export class UserListComponent implements OnInit {
 	}
 
   	getUsers(): void {
-		this.userService.getUsers().then(users => this.users = users);
+		this.userService.getDelayedUsers().then(users => this.users = users);
 	}
 }
