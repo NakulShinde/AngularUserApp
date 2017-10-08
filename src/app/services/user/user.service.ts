@@ -10,7 +10,7 @@ export class UserService {
 
   	constructor() { }
   	
-  	getUsers(): User[] {
-	 	return USERS;
+	getUsers(): Promise<User[]> {
+		return Promise.resolve(USERS);
 	}
 }
